@@ -4,3 +4,7 @@
 config_data.h
 config_data.gz
 timeconst.h
+<<<<<<< HEAD
+=======
+.gitignore
+>>>>>>> cae31c1... modified .gitignore
