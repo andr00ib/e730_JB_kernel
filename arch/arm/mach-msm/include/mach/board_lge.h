@@ -38,7 +38,7 @@
 */
 #define MSM_PMEM_SF_SIZE	0x1D00000
 #ifdef CONFIG_FB_MSM_TRIPLE_BUFFER
-#define MSM_FB_SIZE             0x780000
+#define MSM_FB_SIZE             0x2EE000
 #else
 #define MSM_FB_SIZE             0x500000
 #endif
