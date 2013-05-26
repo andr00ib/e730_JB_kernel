@@ -31,7 +31,7 @@
 #include "mt9p017.h"
 
 // sungmin.woo@lge.com for fast af modification start //
-#define 		USE_LG_fast_af
+//#define 		USE_LG_fast_af
 // sungmin.woo@lge.com for fast af modification end //
 
 #define MT9P017_REG_MODEL_ID 		 0x0000
@@ -680,7 +680,7 @@ static void mt9p017_af_init(void)
 			mt9p017_step_position_table[i] = mt9p017_step_position_table[i-1] + mt9p017_l_region_code_per_step;
 			printk("** mt9p017_step_position_table[%d] = %d **\n", i,mt9p017_step_position_table[i] );
 			}
-		if (mt9p017_step_position_table[i] >255) 
+		if (mt9p017_step_position_table[i] >255) //sungmin.woo 255를 넘어가면 의미 없음 
 		{	
 			mt9p017_step_position_table[i] = 255;
 			printk("*** mt9p017_step_position_table[%d] = %d ***\n", i,mt9p017_step_position_table[i] );
@@ -1371,6 +1371,7 @@ static int mt9p017_sensor_probe(const struct msm_camera_sensor_info *info,
 	s->s_release = mt9p017_sensor_release;
 	s->s_config  = mt9p017_sensor_config;
 	s->s_camera_type = BACK_CAMERA_2D;
+
 	s->s_mount_angle = 0;
 
 	CDBG("mt9p017_sensor_probe: SENSOR PROBE completed !\n");
