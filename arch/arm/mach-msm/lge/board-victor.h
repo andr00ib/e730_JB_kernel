@@ -29,7 +29,7 @@
 * 2011-05-07, cheongil.hyun@lge.com
 * 2011-08-20, Increas SF PMEM(0x1D00000), munyoung.hwang@lge.com
 */
-#define MSM_PMEM_SF_SIZE	0x1D00000
+#define MSM_PMEM_SF_SIZE	0x2200000
 #ifdef CONFIG_FB_MSM_TRIPLE_BUFFER
 #define MSM_FB_SIZE		0x780000
 #else
@@ -39,7 +39,7 @@
 #if 0
 #define MSM_PMEM_ADSP_SIZE      0x1800000
 #else
-#define MSM_PMEM_ADSP_SIZE      0x1B00000
+#define MSM_PMEM_ADSP_SIZE      0x1D00000
 #endif
 //[LGE_UPDATE_S] taeyol.kim@lge.com 2011-06-27
 #define MSM_FLUID_PMEM_ADSP_SIZE	0x2800000
