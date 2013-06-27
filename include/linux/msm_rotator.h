@@ -28,6 +28,7 @@
  */
 
 #ifndef __MSM_ROTATOR_H__
+#define __MSM_ROTATOR_H__
 
 #include <linux/types.h>
 #include <linux/msm_mdp.h>
@@ -84,8 +85,7 @@ struct msm_rotator_platform_data {
 	struct msm_rot_clocks *rotator_clks;
 	const char *regulator_name;
 #ifdef CONFIG_MSM_BUS_SCALING
-        struct msm_bus_scale_pdata *bus_scale_table;
-#endif
+	struct msm_bus_scale_pdata *bus_scale_table;
+#endif	
 };
 #endif
-

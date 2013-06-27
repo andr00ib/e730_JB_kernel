@@ -1,7 +1,7 @@
 /* include/linux/android_pmem.h
  *
  * Copyright (C) 2007 Google, Inc.
- * Copyright (c) 2009-2011, Code Aurora Forum. All rights reserved.
+ * Copyright (c) 2009-2010, Code Aurora Forum. All rights reserved.
  *
  * This software is licensed under the terms of the GNU General Public
  * License version 2, as published by the Free Software Foundation, and
@@ -18,6 +18,7 @@
 #define _ANDROID_PMEM_H_
 
 #include <linux/fs.h>
+#include <linux/ioctl.h>
 
 #define PMEM_KERNEL_TEST_MAGIC 0xc0
 #define PMEM_KERNEL_TEST_NOMINAL_TEST_IOCTL \
@@ -174,6 +175,7 @@ struct android_pmem_platform_data
 	 * indicates that this region should be mapped/unmaped as needed
 	 */
 	int map_on_demand;
+	int reusable;
 };
 
 int pmem_setup(struct android_pmem_platform_data *pdata,
@@ -185,4 +187,3 @@ int pmem_remap(struct pmem_region *region, struct file *file,
 #endif /* __KERNEL__ */
 
 #endif //_ANDROID_PPP_H_
-
