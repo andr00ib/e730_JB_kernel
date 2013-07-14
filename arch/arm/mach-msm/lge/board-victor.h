@@ -50,7 +50,8 @@
 //#if 0
 //#define MSM_PMEM_ADSP_SIZE      0x1800000
 //#else
-#define MSM_PMEM_ADSP_SIZE      0x2F00000
+//[shutt1e_UPDATE] add some adsp memory for 720 recording on JB
+#define MSM_PMEM_ADSP_SIZE      0x2000000
 //#endif
 
 //[LGE_UPDATE_S] taeyol.kim@lge.com 2011-06-27
